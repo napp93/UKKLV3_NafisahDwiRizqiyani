@@ -1,0 +1,55 @@
+/* =========================================================
+   ADMIN  (admin/index.php & admin/users.php)
+   Memakai juga .input .lbl .form-actions dari form.css
+   ========================================================= */
+.page-head { margin-bottom: 24px; }
+.page-head h1 { font-size: 2.3rem; margin-bottom: 4px; }
+.page-head .sub { color: var(--muted); margin: 0; }
+
+/* ---------- Statistik ---------- */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; margin-bottom: 26px; }
+.stat {
+    padding: 24px 26px; border-radius: var(--radius);
+    background: linear-gradient(135deg, rgba(255, 252, 247, .95), rgba(244, 222, 219, .9));
+    border: 1px solid rgba(255, 255, 255, .9); box-shadow: var(--shadow-sm);
+    color: var(--muted); font-weight: 600; font-size: .9rem;
+    display: flex; flex-direction: column; transition: transform .3s;
+}
+.stat:hover { transform: translateY(-4px); }
+.stat:nth-child(2) { background: linear-gradient(135deg, #fffaf3, #efd9c3); }
+.stat:nth-child(3) { background: linear-gradient(135deg, #7a1f35, #5a1426); color: rgba(255, 255, 255, .8); }
+.stat:nth-child(3) .stat-num { color: #fff; }
+.stat-num { font: 700 2.8rem/1 var(--font-head); color: var(--maroon); }
+
+/* ---------- Panel & tabel ---------- */
+.panel {
+    background: rgba(255, 252, 247, .95); border: 1px solid rgba(255, 255, 255, .9);
+    border-radius: 24px; padding: 26px 28px; margin-bottom: 26px; box-shadow: var(--shadow-sm);
+}
+.panel-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 16px; }
+.panel-head h2 { margin: 0; font-size: 1.35rem; }
+.panel-head small { color: var(--muted); font-family: var(--font-body); font-size: .85rem; }
+
+.table-wrap { overflow-x: auto; border-radius: 14px; }
+.table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+.table th {
+    text-align: left; padding: 12px 14px; font-size: .75rem; text-transform: uppercase; letter-spacing: .07em;
+    color: var(--maroon); background: var(--dusty-3);
+}
+.table th:first-child { border-radius: 12px 0 0 12px; }
+.table th:last-child  { border-radius: 0 12px 12px 0; }
+.table td { padding: 13px 14px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+.table tbody tr { transition: background .2s; }
+.table tbody tr:hover { background: rgba(244, 222, 219, .45); }
+.table .right { text-align: right; }
+.actions { white-space: nowrap; }
+.actions form, .actions a { display: inline-block; margin: 0 0 0 4px; }
+
+/* ---------- Form user (grid 4 kolom) ---------- */
+.form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0 18px; }
+.form-row .lbl { margin-top: 8px; }
+
+@media (max-width: 720px) {
+    .panel { padding: 20px 16px; }
+    .page-head h1 { font-size: 1.8rem; }
+}
